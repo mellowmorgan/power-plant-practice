@@ -15,15 +15,8 @@ const storeState = () => {
 }
 
 const stateControl = storeState();
+const stateControl2 = storeState();
 
-// const changeState = (prop) => {
-//   return (value) => {
-//     return (state) => ({
-//     ...state,
-//     [prop] : (state[prop] || 0) + value
-//     })
-//   }
-// }
 const changeState = (valueName) => {
   return (prop)=>{
     return (value) => {
@@ -72,10 +65,34 @@ $(document).ready(function(){
     $('#fertilizer-value').text(`${newState.fertilizer}`);
   });
 
-  // $('#show-state').click(function() {
-  //   const currentState = stateControl();
-  //   $('#soil-value').text(`${currentState.soil}`);
-  // });
+ 
+  $('#add-plant').click(function(){
+    $('#plant-2').show();
+  });
+  //stateControl2 click functions
+
+  $('#type2').click(function(){
+    const input = $("#input-type2").val();
+    const plantName = changeState(input)("")(0);
+    const newState = stateControl2(plantName);
+    $('#type-value2').text(`${newState.name}`);
+  }); 
+  
+  $('#feed2').click(function(){
+    const newState = stateControl2(blueFood);
+    $('#soil-value2').text(`${newState.soil}`);
+
+  });
+
+  $('#water2').click(function(){
+    const newState = stateControl2(hydrate);
+    $('#water-value2').text(`${newState.water}`);
+  });
+
+  $('#fertilizer2').click(function(){
+    const newState = stateControl2(nutrient);
+    $('#fertilizer-value2').text(`${newState.fertilizer}`);
+  });
 
 });
 
