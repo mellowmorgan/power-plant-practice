@@ -2,7 +2,7 @@
 
 #### App to add plants and change their state with functional programming.
 
-#### By Morgan Waites
+#### By Morgan Waites, Karen Axon, Kate Kiatsiri, Curtis Brooks
 
 ## Technologies Used
 
@@ -23,4 +23,4 @@ App to add plants and change their state with functional programming.
 * npm run start to view in broswer at localhost:8000
 
 ## License
-MIT Copyright (c) 2022 Morgan Waites
+MIT Copyright (c) 2022 Morgan Waites, Karen Axon, Kate Kiatsiri, Curtis Brooks
